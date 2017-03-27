@@ -4,6 +4,7 @@ learn react
 1.安装node等环境
 
 2.搭建react脚手架
+https://github.com/react-webpack-generators/generator-react-webpack
 
 3.启动服务
 
