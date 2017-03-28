@@ -20,6 +20,7 @@ a.newsbox:visited{
 .section h2{
 	color: #333;
 	font-size: .9rem;
+	font-weight: 500;
 	text-overflow: ellipsis;
 	-webkit-line-clamp:2;
 	line-clamp:2;
@@ -34,10 +35,17 @@ a.newsbox:visited{
 .img_sm{
 	margin: .25rem 0;
 }
+.img_sm:after{
+	content: '';
+	display: block;
+	clear: both;
+}
 .img_sm_item{
-	width: 33.33%;
-	display: inline-block;
+	width: 32%;
+	/*display: inline-block;*/
+	float: left;
 	margin: 0;
+	border: 1px solid #fff;
 }
 .img_sm_item img{
 	width: 100%;

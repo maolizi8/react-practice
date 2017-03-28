@@ -1,6 +1,7 @@
 require('styles/reset.css')
 import React from 'react';
 import Header from './baidu/header/header'
+import Topnav from './baidu/header/topnav';
 import Section from './baidu/section/section';
 
 //React.initializeTouchEvents(true)
@@ -10,6 +11,7 @@ class Baidu extends React.Component {
    render() {
     return (
     	<div>
+    	<Topnav />
     	  <Header location='北京' />
     	  <Section />
     	</div>

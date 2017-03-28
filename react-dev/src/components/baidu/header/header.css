@@ -214,3 +214,37 @@ header:
 .dian_active{
 	background-color: #c3c3c3;
 }
+
+/*
+topnav
+当页面上滑至看不到header时
+ */
+.topnav{
+	position: fixed;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 2.15rem;
+	line-height: 2.15rem;
+	font-size: .9rem;
+	background: white;
+}
+.topnav ul{
+	list-style: none;
+}
+.topnav ul li{
+	display: inline;
+	padding:0 .6rem;
+}
+.active_li{
+	color: #03a9f4;
+	border-bottom: 1px solie #03a9f4;
+}
+/*.topnav a{
+	color: #666;
+	text-decoration: none;
+}
+.topnav a:active,.topnav a:visited{
+	text-decoration: none;
+}*/
