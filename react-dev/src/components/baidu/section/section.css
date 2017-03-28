@@ -1,0 +1,44 @@
+/*
+section component：
+  标题
+  图片
+*/
+a.newsbox{
+	display: block;
+	margin: 0 .8rem;
+	text-decoration: none;
+	border-bottom: 1px solid #f0f0f0;
+}
+a.newsbox:active,
+a.newsbox:visited{
+	text-decoration: none;
+}
+.section{
+	color: #333;
+	padding: .5rem 0 .7rem;
+}
+.section h2{
+	color: #333;
+	font-size: .9rem;
+	text-overflow: ellipsis;
+	-webkit-line-clamp:2;
+	line-clamp:2;
+	line-height: 1.3rem;
+}
+.newsSource{
+	font-size: .6rem;
+	color:#999;
+	margin-top: .65rem;
+}
+
+.img_sm{
+	margin: .25rem 0;
+}
+.img_sm_item{
+	width: 33.33%;
+	display: inline-block;
+	margin: 0;
+}
+.img_sm_item img{
+	width: 100%;
+}

@@ -1,4 +1,3 @@
-//require('styles/reset.css')
 require('components/baidu/header/header.css');
 import React from 'react';
 
