@@ -85,7 +85,6 @@ header:
 	float: left;
 	border: none;
 	outline: none;
-	-webkit-appearance: none;
 }
 #searchtext{
 	height: 2.25rem;
@@ -98,7 +97,7 @@ header:
 #searchtext:focus{
 	outline:1px solid #38f;
 }
-#searchbt{
+#searchbtn{
 	height: 2.35rem;
 	line-height: 2.35rem;
 	width: 4.2rem;
@@ -106,6 +105,8 @@ header:
 	font-size: .8rem;
 	color: white;
 	background: #38f;
+	-webkit-appearance: none;
+	border-radius: none;
 }
 
 /* product list*/

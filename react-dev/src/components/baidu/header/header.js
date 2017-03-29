@@ -1,7 +1,9 @@
 require('components/baidu/header/header.css');
 import React from 'react';
 
+
 class Header extends React.Component {
+  
   constructor(props){
      super(props);
     this.state={
@@ -10,6 +12,7 @@ class Header extends React.Component {
       prod_section_sub:'prod_section_sub'
     }
   }
+
 	togleProListOne(){
     this.setState({
             classfirst:'togle_dian dian_active',
@@ -17,6 +20,7 @@ class Header extends React.Component {
             prod_section_sub:'prod_section_sub'
         });
   }
+
   togleProListTwo(){
     this.setState({
             classfirst:'togle_dian',
@@ -24,6 +28,16 @@ class Header extends React.Component {
             prod_section_sub:'prod_section_sub prod_toleft'
         });
   }
+
+  togleProdSection(){
+    alert('touch')
+    this.setState({
+            classfirst:'togle_dian',
+            classsecond:'togle_dian dian_active',
+            prod_section_sub:'prod_section_sub prod_toleft'
+        });
+  }
+
   render() {
     return (
       <div className='header'>
@@ -38,7 +52,7 @@ class Header extends React.Component {
           <div className='bdpicture'></div>
           <form className='searchform'>
           <input type='text' name='searchtext' id='searchtext' value='' />
-          <input type='button' name='searchbtn' id='searchbt' value='百度一下' />
+          <input type='button' name='searchbtn' id='searchbtn' value='百度一下' />
           </form>
         </div>
         <div className='prod_section'>
@@ -60,7 +74,7 @@ class Header extends React.Component {
               <a href=''><i className='prod_icons'></i><p>畅听</p></a>
             </div>
           </div>
-          <div className='prod_togle'>
+          <div className='prod_togle' onTouchMove={this.togleProdSection}>
             <div className={this.state.classfirst} onClick={this.togleProListOne.bind(this)}></div>
             <div className={this.state.classsecond} onClick={this.togleProListTwo.bind(this)}></div>
           </div>

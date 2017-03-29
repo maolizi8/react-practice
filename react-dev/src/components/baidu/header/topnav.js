@@ -12,7 +12,6 @@ class Topnav extends React.Component {
     }
   }
   componentWillReceiveProps(nextProps) {
-    //console.log(nextProps)
     this.setState({navDispOrNot:nextProps.navTogle?nextProps.navTogle:'topnav fade'});
     }
 	choseNavBtn(e){
@@ -21,7 +20,6 @@ class Topnav extends React.Component {
     for (var i = liList.length - 1; i >= 0; i--) {
       liList[i].className=''
     }
-    //console.log(target.parentNode.childNodes[0]);
     target.className='active_li'
   }
   render() {
