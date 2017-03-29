@@ -30,11 +30,10 @@ class Header extends React.Component {
   }
 
   togleProdSection(){
-    alert('touch')
     this.setState({
-            classfirst:'togle_dian',
-            classsecond:'togle_dian dian_active',
-            prod_section_sub:'prod_section_sub prod_toleft'
+            classfirst:this.state.classfirst=='togle_dian'?'togle_dian dian_active':'togle_dian',
+            classsecond:this.state.classsecond=='togle_dian'?'togle_dian dian_active':'togle_dian',
+            prod_section_sub:this.state.prod_section_sub=='prod_section_sub prod_toleft'?'prod_section_sub':'prod_section_sub prod_toleft'
         });
   }
 
@@ -55,7 +54,7 @@ class Header extends React.Component {
           <input type='button' name='searchbtn' id='searchbtn' value='百度一下' />
           </form>
         </div>
-        <div className='prod_section'>
+        <div className='prod_section' onTouchMove={this.togleProdSection.bind(this)}>
           <div className={this.state.prod_section_sub}>
             <div className='prod_list'>
               <a href=''><i className='prod_icons'></i><p>关注</p></a>
@@ -74,7 +73,7 @@ class Header extends React.Component {
               <a href=''><i className='prod_icons'></i><p>畅听</p></a>
             </div>
           </div>
-          <div className='prod_togle' onTouchMove={this.togleProdSection}>
+          <div className='prod_togle'>
             <div className={this.state.classfirst} onClick={this.togleProListOne.bind(this)}></div>
             <div className={this.state.classsecond} onClick={this.togleProListTwo.bind(this)}></div>
           </div>
