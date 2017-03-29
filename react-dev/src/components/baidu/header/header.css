@@ -4,7 +4,7 @@ header:
   searchbox
   product list section
 */
-.top,.searchbox,.prod_section{
+.header{
 	background: rgb(248, 248, 248);
 	color: rgb(153, 153, 153);
 	width: 100%;
@@ -85,6 +85,7 @@ header:
 	float: left;
 	border: none;
 	outline: none;
+	-webkit-appearance: none;
 }
 #searchtext{
 	height: 2.25rem;
@@ -229,17 +230,24 @@ topnav
 	line-height: 2.15rem;
 	font-size: .9rem;
 	background: white;
+	border-bottom: 1px solid #e5e5e5;
+	color: #666;
+}
+.topnav_fade{
+	display: none;
 }
 .topnav ul{
 	list-style: none;
 }
 .topnav ul li{
-	display: inline;
+	display: inline-block;
+	height: calc(2.15rem - 2px);
+	line-height: calc(2.15rem - 2px);
 	padding:0 .6rem;
 }
 .active_li{
-	color: #03a9f4;
-	border-bottom: 1px solie #03a9f4;
+	color: #38f;
+	border-bottom: 2px solid #38f;
 }
 /*.topnav a{
 	color: #666;

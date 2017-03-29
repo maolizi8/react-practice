@@ -19,7 +19,7 @@ class Section extends React.Component {
   render() {
     var newsList=this.state.newsList;
     return (
-      <div>
+      <div className='maincontent'>
       {newsList.map(function(item){
         var imglist=item.img
         return (

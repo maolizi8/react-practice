@@ -26,7 +26,7 @@ class Header extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className='header'>
         <div className='top'>
           <div className='dushu'></div>
           <div className='location'>

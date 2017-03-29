@@ -5,18 +5,28 @@ class Topnav extends React.Component {
   constructor(props){
      super(props);
     this.state={
+      navDispOrNot:this.props.navTogle?this.props.navTogle:'topnav fade',
       classfirst:'togle_dian dian_active',
       classsecond:'togle_dian',
       prod_section_sub:'prod_section_sub'
     }
   }
+  componentWillReceiveProps(nextProps) {
+    //console.log(nextProps)
+    this.setState({navDispOrNot:nextProps.navTogle?nextProps.navTogle:'topnav fade'});
+    }
 	choseNavBtn(e){
     var target=e.target;
-    // target.className.add('active_li');
+    var liList=target.parentNode.childNodes;
+    for (var i = liList.length - 1; i >= 0; i--) {
+      liList[i].className=''
+    }
+    //console.log(target.parentNode.childNodes[0]);
+    target.className='active_li'
   }
   render() {
     return (
-      <div className='topnav'>
+      <div className={this.state.navDispOrNot}>
           <ul onClick={this.choseNavBtn}>
             <li>推荐</li>
             <li>视频</li>
