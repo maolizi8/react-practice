@@ -14,10 +14,10 @@ constructor(props){
     }
   }
 	componentDidMount() {
-    	window.addEventListener('scroll', this.handleScroll.bind(this));
+    	document.body.addEventListener('touchmove', this.handleScroll.bind(this));
   	}
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll.bind(this));
+    document.body.removeEventListener('touchmove', this.handleScroll.bind(this));
   }
   handleScroll() {
   	if (document.body.scrollTop>209) {
